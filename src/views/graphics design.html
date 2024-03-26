@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <title>Graphics Design Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .logo {
+            color: black;
+            font-size: 30px;
+        }
+
+        .logo span {
+            color: #0073ff;
+        }
+
+        .menu-bar {
+            background-color: whitesmoke;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1%;
+            position: relative;
+        }
+
+        .menu-bar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu-bar ul li {
+            padding: 10px 30px;
+            position: relative;
+        }
+
+        .menu-bar ul li a {
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .menu-bar ul li a:hover {
+            color: #0073ff;
+        }
+
+        .fas {
+            float: right;
+            margin-left: 10px;
+            padding-top: 3px;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: whitesmoke;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu ul {
+            display: block;
+            margin: 10px;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu ul li {
+            width: 150px;
+            padding: 10px;
+        }
+
+        .dropdown-menu-1 {
+            display: none;
+        }
+
+        .dropdown-menu ul li:hover .dropdown-menu-1 {
+            display: block;
+            position: absolute;
+            left: 150px;
+            top: 0;
+            background-color: whitesmoke;
+        }
+
+
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li::before {
+            content: '🎨';
+            color: #007bff;
+            margin-right: 8px;
+        }
+
+        .testimonial {
+            background-color: #e9ecef;
+            border-left: 4px solid #007bff;
+            padding: 10px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .testimonial cite {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        #registration {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            list-style: none;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #227093;
+            font-weight: bold;
+        }
+
+        a {
+            color: white;
+            text-decoration-line: none;
+        }
+
+        .menu-bar ul li::before {
+            content: '';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-bar">
+        <h1 class="logo">Learn<span>Ed</span></h1>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Courses <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Online <i class="fas fa-caret-right"></i></a>
+
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="ai.html">AI</a></li>
+                                    <li><a href="appdevelopment.html">App Development</a></li>
+                                    <li><a href="blockchain.html">BlockChain</a></li>
+                                    <li><a href="cybersecurity.html">Cyber Security</a></li>
+                                    <li><a href="devops.html">DevOps</a></li>
+                                    <li><a href="digital marketing.html">Digital Marketing</a></li>
+                                    <li><a href="full stack.html">Full Stack Development</a></li>
+                                    <li><a href="graphics design.html">Graphics Design</a></li>
+                                    <li><a href="IOT.html">IOT</a></li>
+                                    <li><a href="ui ux design.html">UI/UX Design</a></li>
+                                    <li><a href="webdevelopment.html">Web Development</a></li>
+                                    <li><a href="web design.html">Web design</a></li>   
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Offline <i class="fas fa-caret-right"></i></a>
+
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="ai.html">AI</a></li>
+                                    <li><a href="appdevelopment.html">App Development</a></li>
+                                    <li><a href="blockchain.html">BlockChain</a></li>
+                                    <li><a href="cybersecurity.html">Cyber Security</a></li>
+                                    <li><a href="devops.html">DevOps</a></li>
+                                    <li><a href="digital marketing.html">Digital Marketing</a></li>
+                                    <li><a href="full stack.html">Full Stack Development</a></li>
+                                    <li><a href="graphics design.html">Graphics Design</a></li>
+                                    <li><a href="IOT.html">IOT</a></li>
+                                    <li><a href="ui ux design.html">UI/UX Design</a></li>
+                                    <li><a href="webdevelopment.html">Web Development</a></li>
+                                    <li><a href="web design.html">Web design</a></li>  
+                                </ul>
+                            </div>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="signup.html">Sign in</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <h1>Graphics Design Essentials</h1>
+    </header>
+
+    <section id="course-intro">
+        <h2>Course Introduction</h2>
+        <p>Embark on your journey to master graphic design techniques. Our comprehensive course covers essential tools and principles, empowering you to create stunning visual content.</p>
+    </section>
+
+    <section id="course-features">
+        <h2>What You Will Learn</h2>
+        <ul>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Typography</li>
+            <li>Color Theory</li>
+            <li>Layout Design</li>
+        </ul>
+    </section>
+
+    <section id="testimonials-dev">
+        <h2>Student Testimonials</h2>
+        <div class="testimonial">
+            <p>"The Graphics Design course exceeded my expectations. I learned valuable skills and gained confidence in my design abilities. Highly recommended!"</p>
+            <cite>- Michael Johnson</cite>
+        </div>
+    </section>
+
+    <section id="registration">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Take the first step towards mastering graphic design. Join us today!</p>
+        <button><a href="https://forms.gle/zjFg464dEFGDvx1bA">Register Now</a></button>
+    </section>
+
+    <footer>
+        <p>© 2024 Graphics Design Essentials</p>
+    </footer>
+
+</body>
+
+</html>

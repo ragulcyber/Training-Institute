@@ -1,0 +1,250 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>dropdown Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: silver;
+        }
+
+        .logo {
+            color: black;
+            font-size: 30px;
+        }
+
+        .logo span {
+            color:#0073ff;
+        }
+
+        .menu-bar {
+            background-color: whitesmoke;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+        }
+
+        .menu-bar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu-bar ul li {
+            padding: 10px 30px;
+            position: relative;
+        }
+
+        .menu-bar ul li a {
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .menu-bar ul li a:hover {
+            color: #0073ff;
+        }
+
+        .fas {
+            float: right;
+            margin-left: 10px;
+            padding-top: 3px;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: whitesmoke;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu ul {
+            display: block;
+            margin: 10px;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu ul li {
+            width: 150px;
+            padding: 10px;
+        }
+
+        .dropdown-menu-1 {
+            display: none;
+        }
+
+        .dropdown-menu ul li:hover .dropdown-menu-1 {
+            display: block;
+            position: absolute;
+            left: 150px;
+            top: 0;
+            background-color: whitesmoke;
+        }
+
+        #features {
+            padding: 5vh 8vw 0 8vw;
+            text-align: center;
+        }
+
+        #features p{
+            margin-top: 20px;
+        }
+
+        #features .fea-base {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-gap: 1rem;
+            margin-top: 50px;
+        }
+
+        #features .fea-box {
+            background-color: #F9F9FF;
+            text-align: start;
+        }
+
+        #features .fea-box i {
+            font-size: 2.3 rem;
+            color: rgb(44, 44, 80);
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+
+        #features .fea-box h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgb(46, 46, 59);
+            padding: 13px 0 7px 0;
+            
+        }
+
+        #features .fea-box h3 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgb(70, 70, 87);
+            margin-top: -20px;
+            margin-left: 45px;
+        }
+
+        #features .fea-box p{
+            margin-left: 15px;
+        }
+    
+        #features .fea-box:hover{
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+        #features .fea-box{
+            border-radius: 5px;
+            background-color: gainsboro;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="menu-bar">
+        <h1 class="logo">Learn<span>Ed</span></h1>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Courses <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Online <i class="fas fa-caret-right"></i></a>
+
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="ai.html">AI</a></li>
+                                    <li><a href="appdevelopment.html">App Development</a></li>
+                                    <li><a href="blockchain.html">BlockChain</a></li>
+                                    <li><a href="cybersecurity.html">Cyber Security</a></li>
+                                    <li><a href="devops.html">DevOps</a></li>
+                                    <li><a href="digital marketing.html">Digital Marketing</a></li>
+                                    <li><a href="full stack.html">Full Stack Development</a></li>
+                                    <li><a href="graphics design.html">Graphics Design</a></li>
+                                    <li><a href="IOT.html">IOT</a></li>
+                                    <li><a href="ui ux design.html">UI/UX Design</a></li>
+                                    <li><a href="webdevelopment.html">Web Development</a></li>
+                                    <li><a href="web design.html">Web design</a></li>  
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Offline <i class="fas fa-caret-right"></i></a>
+
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="ai.html">AI</a></li>
+                                    <li><a href="appdevelopment.html">App Development</a></li>
+                                    <li><a href="blockchain.html">BlockChain</a></li>
+                                    <li><a href="cybersecurity.html">Cyber Security</a></li>
+                                    <li><a href="devops.html">DevOps</a></li>
+                                    <li><a href="digital marketing.html">Digital Marketing</a></li>
+                                    <li><a href="full stack.html">Full Stack Development</a></li>
+                                    <li><a href="graphics design.html">Graphics Design</a></li>
+                                    <li><a href="IOT.html">IOT</a></li>
+                                    <li><a href="ui ux design.html">UI/UX Design</a></li>
+                                    <li><a href="webdevelopment.html">Web Development</a></li>
+                                    <li><a href="web design.html">Web design</a></li>  
+                                </ul>
+                            </div>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="signup.html">Sign in</a></li>
+        </ul>
+    </div>
+    <section id="features">
+        <h1>About us</h1>
+        <p>LearnEd" is a cutting-edge training website dedicated to empowering individuals with the knowledge and skills they need to excel in today's fast-paced world. Our mission is to provide high-quality training programs that cater to diverse learning needs, ranging from web development and mobile app development to cybersecurity and beyond.</p>
+        <br>
+        <p>At LearnEd, we believe in the transformative power of education.Our team of experienced instructors is committed to delivering engaging and interactive learning experiences that inspire growth and innovation. Whether you're a beginner looking to start your journey in the tech industry or a seasoned professional seeking to expand your skill set, we have something for everyone.</p>
+
+        <div class="fea-base">
+            <div class="fea-box">
+                <i class="fa-solid fa-book"></i>
+                <h3>MISSION</h3>
+                <p>Our mission at LearnEd is empower individuals with practical skills and knowledge through high-quality training programs,and professional growth in a supportive and innovative learning.</p>
+
+
+            </div>
+            <div class="fea-box">
+                <i class="fa-solid fa-earth-americas"></i>
+                <h3>VISION</h3>
+                <p>Our vision at LearnEd is to become a global leader in education by revolutionizing the way people learn, ensuring accessibility to top-quality courses,and inspiring lifelong learning and success.</p>
+
+
+            </div>
+            <div class="fea-box">
+                <i class="fa-solid fa-pencil"></i>
+                <h3>ACHIEVEMENTS</h3>
+                <p>LearnEd Institute has proudly achieved recognition for its outstanding course offerings,innovative,and dedication to student success. Our graduates excel in their fields, driving real-world.</p>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

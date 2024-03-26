@@ -1,0 +1,161 @@
+.logo {
+    color: black;
+    font-size: 30px;
+    margin-left: 5%;
+}
+
+.logo span {
+    color:#0073ff;
+}
+
+.menu-bar {
+    background-color: whitesmoke;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-bar ul li {
+    padding: 10px 30px;
+    position: relative;
+}
+
+.menu-bar ul li a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+    color: #0073ff;
+}
+
+.fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: whitesmoke;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+}
+
+.dropdown-menu-1 {
+    display: none;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: whitesmoke;
+}
+
+
+
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(34, 193, 195);
+    background-image: linear-gradient(135deg, #4d5ea9 10%, #bd3e1e 100%);
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Poppins' , sans-serif;
+
+}
+
+h2{
+    text-align: center;
+    margin-bottom:30px ;
+}
+
+.form-container{
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 60px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.input-group input{
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid rgb(34, 193, 195);
+}
+.input-group input:focus{
+    outline: 0;
+}
+.input-group.error{
+    color: red;
+    font-size: 16px;
+   margin-top: 5px; 
+}
+
+.input-group.success input{
+    border-color:#0cc477;
+}
+
+.input-group.error input{
+    border-color:red;
+} 
+
+.submit-btn{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    background-color: blueviolet;
+    color: beige;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color: aqua;
+}
+
+p{
+    margin-top: 15px;
+}

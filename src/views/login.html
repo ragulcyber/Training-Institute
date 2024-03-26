@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins' , sans-serif;
+        }
+
+        .logo {
+            color: black;
+            font-size: 30px;
+        }
+
+        .logo span {
+            color: #0073ff;
+        }
+
+        .menu-bar {
+            background-color: whitesmoke;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+        }
+
+        .menu-bar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu-bar ul li {
+            padding: 10px 30px;
+            position: relative;
+        }
+
+        .menu-bar ul li a {
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .menu-bar ul li a:hover {
+            color: #0073ff;
+        }
+
+        .fas {
+            float: right;
+            margin-left: 10px;
+            padding-top: 3px;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: whitesmoke;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu ul {
+            display: block;
+            margin: 10px;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu ul li {
+            width: 150px;
+            padding: 10px;
+        }
+
+        .dropdown-menu-1 {
+            display: none;
+        }
+
+        .dropdown-menu ul li:hover .dropdown-menu-1 {
+            display: block;
+            position: absolute;
+            left: 150px;
+            top: 0;
+            background-color: whitesmoke;
+        }
+
+        .brand-logo {
+            height: 100px;
+            width: 100px;
+            background-image: url(./images/th.jpg);
+            margin: auto;
+            border-radius: 50%;
+            box-sizing: border-box;
+            background-size: cover;
+        }
+
+        .brand-title {
+            color: black;
+            font-style: italic;
+        }
+
+        body {
+            background: rgb(34, 193, 195);
+            background-image: linear-gradient(135deg, #64b3f4 10%, #c2e59c 100%);
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 100px;
+            background-color: white;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            display: block;
+            padding: 10px;
+            background-color: rgb(144, 59, 224);
+            color: beige;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: rgb(5, 114, 22);
+        }
+
+        p {
+            margin-top: 15px;
+        }
+    </style>
+    <div class="menu-bar">
+        <h1 class="logo">Learn<span>Ed</span></h1>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Courses <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Online <i class="fas fa-caret-right"></i></a>
+
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="ai.html">AI</a></li>
+                                    <li><a href="appdevelopment.html">App Development</a></li>
+                                    <li><a href="blockchain.html">BlockChain</a></li>
+                                    <li><a href="cybersecurity.html">Cyber Security</a></li>
+                                    <li><a href="devops.html">DevOps</a></li>
+                                    <li><a href="digital marketing.html">Digital Marketing</a></li>
+                                    <li><a href="full stack.html">Full Stack Development</a></li>
+                                    <li><a href="graphics design.html">Graphics Design</a></li>
+                                    <li><a href="IOT.html">IOT</a></li>
+                                    <li><a href="ui ux design.html">UI/UX Design</a></li>
+                                    <li><a href="webdevelopment.html">Web Development</a></li>
+                                    <li><a href="web design.html">Web design</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Offline <i class="fas fa-caret-right"></i></a>
+
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="ai.html">AI</a></li>
+                                    <li><a href="appdevelopment.html">App Development</a></li>
+                                    <li><a href="blockchain.html">BlockChain</a></li>
+                                    <li><a href="cybersecurity.html">Cyber Security</a></li>
+                                    <li><a href="devops.html">DevOps</a></li>
+                                    <li><a href="digital marketing.html">Digital Marketing</a></li>
+                                    <li><a href="full stack.html">Full Stack Development</a></li>
+                                    <li><a href="graphics design.html">Graphics Design</a></li>
+                                    <li><a href="IOT.html">IOT</a></li>
+                                    <li><a href="ui ux design.html">UI/UX Design</a></li>
+                                    <li><a href="webdevelopment.html">Web Development</a></li>
+                                    <li><a href="web design.html">Web design</a></li>
+                                </ul>
+                            </div>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="signup.html">Sign in</a></li>
+        </ul>
+    </div>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="name">Email:</label>
+                <input type="text" id="name" name="username" placeholder="Enter your name" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Log in</button>
+        </form>
+        <p>Don't have account? <a href="/signup">signup</a></p>
+    </div>
+</body>
+
+</html>

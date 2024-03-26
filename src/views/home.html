@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
+    <title>LearnEd</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            font-family:  sans-serif;
+        }
+
+        #home {
+            margin-top: 0%;
+            background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url(/images/back.jpg);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 40px;
+
+        }
+
+        #home h2 {
+            color: white;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        #home p {
+            width: 50%;
+            color: white;
+            font-size: 0.9rem;
+            line-height: 25px;
+        }
+
+        #home .btn {
+            margin-top: 30px;
+
+        }
+
+        #home a {
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 13px 30px;
+            background-color: white;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+
+        #home a.blue {
+            color: #fff;
+            background-color: rgb(21, 21, 100);
+
+        }
+
+        #home a.blue:hover {
+            color: rgb(21, 21, 100);
+            background-color: #fff;
+            transition: 0.3 ease;
+        }
+
+        #home a.yellow {
+            color: #fff;
+            background-color: #FDC938;
+
+        }
+
+        #home a.yellow:hover {
+            color: #FDC938;
+            background-color: #fff;
+            transition: 0.3 ease;
+        }
+
+        #features {
+            padding: 5vw 8vw 0 8vw;
+            text-align: center;
+        }
+
+        #features .fea-base {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-gap: 1rem;
+            margin-top: 50px;
+        }
+
+        #features .fea-box {
+            background-color: #F9F9FF;
+            text-align: start;
+        }
+
+        #features .fea-box i {
+            font-size: 2.3 rem;
+            color: rgb(44, 44, 80);
+        }
+
+        #features .fea-box h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgb(46, 46, 59);
+            padding: 13px 0 7px 0;
+        }
+
+        #features .fea-box h3 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgb(70, 70, 87);
+        }
+
+        #course-vid {
+            padding: 8vw 8vw 0 8vw;
+            text-align: center;
+
+        }
+
+        #course-vid .courses:hover {
+
+            transform: scale(1.1);
+        }
+
+        #course-vid .course-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-gap: 1rem;
+            margin-top: 50px;
+        }
+
+        #course-vid .courses {
+            text-align: start;
+            background: #F9F9FF;
+            height: 100%;
+        }
+
+        #course-vid .courses img {
+            width: 100%;
+            height: 60%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #course-vid .courses .details i {
+            color: #FDC93B;
+            font-size: .9rem;
+        }
+
+       .title {
+            position: absolute;
+            margin-top: 40px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            top: 310%;
+            left: 35%;
+        } 
+
+        .course {
+            position: absolute;
+            top: 325%;
+            left: 5%;
+        }
+
+        .cbox {
+            position: relative;
+            width: 100%;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0%;
+        }
+
+        .cbox .det {
+            width: 250px;
+            height: 80px;
+            margin: 20px;
+            cursor: pointer;
+            display: flex;
+        }
+
+        .cbox .det a {
+            justify-content: space-around;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 15px;
+            color: #272529;
+            text-decoration: none;
+        }
+
+        .cbox .det a:hover {
+            background: linear-gradient(to right, rgb(236, 186, 186), rgb(228, 15, 51));
+            color: white;
+        }
+
+        .cbox .det a:hover img {
+            filter: brightness(100);
+        }
+
+        .cbox img {
+            width: 20px;
+            margin-right: 20px;
+        }
+
+        footer {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            background-color: rgb(10, 45, 80);
+            padding: 8vw;
+            top: 370%;
+            width: 100%;
+        }
+
+        footer .footer-col {
+            padding-bottom: 40px;
+
+        }
+
+        footer h3 {
+            color: rgb(241, 240, 245);
+            font-weight: 600;
+            padding-bottom: 20px;
+
+        }
+
+        footer li {
+            list-style: none;
+            color: #7b838a;
+            padding: 10px 0;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        footer li:hover {
+            color: white;
+        }
+
+        footer p {
+            color: #7b838a;
+        }
+
+        footer .subscribe {
+            margin-top: 20px;
+
+        }
+
+        footer input {
+            width: 220px;
+            padding: 15px 12px;
+
+        }
+
+        footer .subscribe a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 5px;
+            padding: 13px 35px;
+            font-size: 0.9rem;
+
+        }
+
+        footer .yellow {
+            background-color: #FDC93B;
+        }
+
+        footer .yellow:hover {
+            background-color: #fff;
+            color: #FDC93B;
+        }
+        
+        /* nav bar */
+        .logo {
+            color: black;
+            font-size: 30px;
+        }
+
+        .logo span {
+            color:#0073ff;
+        }
+
+        .menu-bar {
+            background-color: whitesmoke;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+        }
+
+        .menu-bar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu-bar ul li {
+            padding: 10px 30px;
+            position: relative;
+        }
+
+        .menu-bar ul li a {
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .menu-bar ul li a:hover {
+            color: #0073ff;
+        }
+
+        .fas {
+            float: right;
+            margin-left: 10px;
+            padding-top: 3px;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: whitesmoke;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu ul {
+            display: block;
+            margin: 10px;
+        }
+
+        .menu-bar ul li:hover .dropdown-menu ul li {
+            width: 150px;
+            padding: 10px;
+        }
+
+        .dropdown-menu-1 {
+            display: none;
+        }
+
+        .dropdown-menu ul li:hover .dropdown-menu-1 {
+            display: block;
+            position: absolute;
+            left: 150px;
+            top: 0;
+            background-color: whitesmoke;
+        }
+
+    </style> 
+</head>
+
+<body>
+
+        <!-- // new one  -->
+      
+         <div class="menu-bar">
+        <h1 class="logo">Learn<span>Ed</span></h1>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Courses <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Online <i class="fas fa-caret-right"></i></a>
+
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="ai.html">AI</a></li>
+                                    <li><a href="appdevelopment.html">App Development</a></li>
+                                    <li><a href="blockchain.html">BlockChain</a></li>
+                                    <li><a href="cybersecurity.html">Cyber Security</a></li>
+                                    <li><a href="devops.html">DevOps</a></li>
+                                    <li><a href="digital marketing.html">Digital Marketing</a></li>
+                                    <li><a href="full stack.html">Full Stack Development</a></li>
+                                    <li><a href="graphics design.html">Graphics Design</a></li>
+                                    <li><a href="IOT.html">IOT</a></li>
+                                    <li><a href="ui ux design.html">UI/UX Design</a></li>
+                                    <li><a href="webdevelopment.html">Web Development</a></li>
+                                    <li><a href="web design.html">Web design</a></li>  
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Offline <i class="fas fa-caret-right"></i></a>
+
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="ai.html">AI</a></li>
+                                    <li><a href="appdevelopment.html">App Development</a></li>
+                                    <li><a href="blockchain.html">BlockChain</a></li>
+                                    <li><a href="cybersecurity.html">Cyber Security</a></li>
+                                    <li><a href="devops.html">DevOps</a></li>
+                                    <li><a href="digital marketing.html">Digital Marketing</a></li>
+                                    <li><a href="full stack.html">Full Stack Development</a></li>
+                                    <li><a href="graphics design.html">Graphics Design</a></li>
+                                    <li><a href="IOT.html">IOT</a></li>
+                                    <li><a href="ui ux design.html">UI/UX Design</a></li>
+                                    <li><a href="webdevelopment.html">Web Development</a></li>
+                                    <li><a href="web design.html">Web design</a></li>  
+                                </ul>
+                            </div>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="signup.html">Sign in</a></li>
+        </ul>
+    </div>
+
+        <!-- // home  -->
+
+        <section id="home">
+            <h2>Enhance Your Future With LearnEd</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ex itaque cupiditate labore quod at
+                eaque corrupti vitae soluta, ipsa nisi aliquid beatae aperiam doloribus! Minima ut necessitatibus
+                sapiente doloribus.</p>
+            <div class="btn">
+                <a class="blue" href="learn more.html">Learn More</a>
+                <a class="yellow" href="#course1">View Courses</a>
+            </div>
+        </section>
+
+        <section id="features">
+            <h1>Awesome Features</h1>
+            <p>The best training provider websites put user experience first.</p>
+            <div class="fea-base">
+                <div class="fea-box">
+                    <i class="bi bi-mortarboard-fill"></i>
+                    <h3>Scholarship Facility</h3>
+                    <p>Unlock Your Potential with LearnEd Training Institute</p>
+
+                </div>
+                <div class="fea-box">
+                    <i class="bi bi-journal-album"></i>
+                    <h3>Online Courses</h3>
+                    <p>Unlock Your Potential with LearnEd Training Institute</p>
+
+                </div>
+                <div class="fea-box">
+                    <i class="fa-solid fa-award"></i>
+                    <h3>Training Certificate</h3>
+                    <p>Unlock Your Potential with LearnEd Training Institute</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="course-vid" id="course1">
+            <h1>Courses</h1>
+            <p>The best training provider websites put user experience first.</p>
+            <div class="course-box" >
+
+                <div class="courses">
+                    <img src="/images/c1.jpg" alt="">
+                    <div class="details">
+                        <span>Updated 28/2/24</span>
+                        <h6>JavaScript Beginners Course</h6>
+                        <div class="star">
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <span>(100)</span><br>
+                            <span>$19.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses">
+                    <img src="/images/c2.jpg" alt="">
+                    <div class="details">
+                        <span>Updated 26/2/24</span>
+                        <h6>JS Course</h6>
+                        <div class="star">
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <span>(200)</span><br>
+                            <span> $29.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses">
+                    <img src="/images/c3.jpg" alt="">
+                    <div class="details">
+                        <span>Updated 29/2/24</span>
+                        <h6>Python Course</h6>
+                        <div class="star">
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <span>(300)</span><br>
+                            <span>$39.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses">
+                    <img src="/images/c4.jpg" alt="">
+                    <div class="details">
+                        <span>Updated 02/03/24</span>
+                        <h6>DevOps Course</h6>
+                        <div class="star">
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <span>(300)</span><br>
+                            <span>$44.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses">
+                    <img src="/images/c5.jpeg" alt="">
+                    <div class="details">
+                        <span>Updated 03/03/24</span>
+                        <h6>Web Design</h6>
+                        <div class="star">
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <span>(80)</span><br>
+                            <span>$10.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses">
+                    <img src="/images/c6.jpg" alt="">
+                    <div class="details">
+                        <span>Updated 03/03/24</span>
+                        <h6>IOT Course</h6>
+                        <div class="star">
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"> </i>
+                            <span>(150)</span><br>
+                            <span>$25.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="title">
+            <span>Popular Subjects on LearnEd</span>
+        </div>
+        <br><br>
+        <div class="course">
+            <center>
+                <div class="cbox">
+                    <div class="det"><a href="https://r.search.yahoo.com/_ylt=AwrKAyYqe.VlGaINbuS7HAx.;_ylu=Y29sbwNzZzMEcG9zAzIEdnRpZAMEc2VjA3Ny/RV=2/RE=1709566890/RO=10/RU=https%3a%2f%2fwww.geeksforgeeks.org%2fwhat-is-full-stack-development%2f/RK=2/RS=3MwdlprXHYkql5Tola_OYaKsWRA-"><img
+                                src="/images/book.png">Full Stack</a>
+                    </div>
+                    <div class="det"><a href="https://r.search.yahoo.com/_ylt=AwrKDa52e.VlI1AO10u7HAx.;_ylu=Y29sbwNzZzMEcG9zAzIEdnRpZAMEc2VjA3Ny/RV=2/RE=1709566966/RO=10/RU=https%3a%2f%2fprepinsta.com%2f/RK=2/RS=xIBomvUXC7hwzIMBgYhAXcyEGNg-"><img
+                                src="/images/d1.png">Company
+                            Preparation</a>
+                    </div>
+                    <div class="det"><a href="https://www.cbse.gov.in/cbsenew/samplepaper.html"><img
+                                src="/images/paper.png">Sample Papers</a></div>
+                    <div class="det"><a href="https://www.jetpunk.com/top-quizzes-by-day/"><img
+                                src="/images/d1.png">Daily Quiz</a></div>
+                </div>
+            </center>
+            <div class="cbox">
+                <div class="det"><a
+                        href="https://r.search.yahoo.com/cbclk2/dWU9NnNocTlucGl0dHV0biZ1dD0xNzA5MTEyMjQ3Mzc2JnVvPTc1NzI5MDIxMDM1MDAyJmx0PTImcz0xJmVzPWU2MXZNX0lHUFNfWmVwMjhHdERFbHFFOWlMaDZlYzUxTm5GLlBQVE40WHRFb1NpWn5A/RV=2/RE=1711704247/RO=14/RU=https%3a%2f%2fwww.bing.com%2faclick%3fld%3de8WlhBm7e-inktqjyGR8J6fjVUCUx38OjsfyJbnXGeoxKgi_k7e_okZvAYk0j4ThSnrx3nu6Mc4eVe3sz8pX0qh3vFR0H4stc7DZVWXDV57sLxuTPfGrbptaxEzi3Ag8-SNAwiVuvruXXbavYN9pixxnTTrUz66d8l9eBbFlkuOn_nc9nYbTNxML-D40Bk8vDBFt4Wxw%26u%3daHR0cHMlM2ElMmYlMmZ3d3cudWRlbXkuY29tJTJmJTNmdXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkdWRlbXlhZHMlMjZ1dG1fY2FtcGFpZ24lM2RCRy1HZW5lcmljX2xhLkVOX2NjLklORElBJTI2dXRtX2NvbnRlbnQlM2RkZWFsNDU4NCUyNnV0bV90ZXJtJTNkXy5fYWdfMTIxMTY2MjIyNjk2NDA1Ml8uX2FkX18uX2t3XyUyNTJCY291cnNlcyUyNTIwJTI1MkJvbmxpbmVfLl9kZV9jXy5fZG1fXy5fcGxfXy5fdGlfa3dkLTc1NzI5MjAxNzU5MzMzJTNhbG9jLTkwXy5fbGlfMTY3NF8uX3BkX18uXyUyNm1hdGNodHlwZSUzZHAlMjZtc2Nsa2lkJTNkYTUyYWJmN2RmYmEwMWRhMzA1MDRkYWEzMDAxNzVkY2E%26rlid%3da52abf7dfba01da30504daa300175dca/RK=2/RS=7Eo1eDUDHHw1Csb6ovBQ5Y9YFWg-;_ylt=AwrPrqi3.95l8rcMGdW7HAx.;_ylu=Y29sbwNzZzMEcG9zAzIEdnRpZAMEc2VjA292LXRvcA--;_ylc=X3IDMgRydAMw?IG=0acfaea8521a4234890000000002aa0b"><img
+                            src="/images/computer.png">Computer Courses</a></div>
+                <div class="det"><a href="https://www.geeksforgeeks.org/data-structures/"><img
+                            src="/images/data.png">Data
+                        Structures</a></div>
+                <div class="det"><a href="https://www.geeksforgeeks.org/introduction-to-algorithms/"><img
+                            src="/images/algo.png">Algorithm</a></div>
+                <div class="det det-last"><a href="https://www.geeksforgeeks.org/computer-science-projects/"><img
+                            src="/images/projects.png">Projects</a></div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-col">
+                <h3>Top Courses</h3>
+                <li>Python</li>
+                <li>Java</li>
+                <li>Mobileapp Development</li>
+                <li>JavaScript</li>
+            </div>
+
+            <div class="footer-col">
+                <h3>Famous Trainers</h3>
+                <li>Wwww</li>
+                <li>Xxxx</li>
+                <li>Yyyy</li>
+                <li>Zzzz</li>
+            </div>
+
+            <div class="footer-col">
+                <h3>Resources</h3>
+                <li>Research</li>
+                <li>Expects</li>
+                <li>Training</li>
+                <li>Guides</li>
+            </div>
+            <div class="footer-col">
+                <h3>Connect With Us</h3>
+                <p>You can trust us, we only send course offers, </p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Enter your Email address">
+                    <a href="#" class="yellow">Subscribe</a>
+                </div>
+            </div>
+
+        </footer>
+
+</body>
+
+</html>
