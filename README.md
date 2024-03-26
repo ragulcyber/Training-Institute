@@ -1,0 +1,1 @@
+Welcome to the official repository of Training Institute LearnEd website! Technologies Used Frontend: HTML CSS Backend: Express.js JavaScript MongoDB Node Others: JSON (for configuration/data storage)
